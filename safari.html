@@ -1,0 +1,74 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safari Peaks Adventures</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Safari Peaks Adventures</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="hero-banner">
+            <h1>Discover the World's Most Spectacular Hiking Trails</h1>
+            <p>From Kilimanjaro to Yellowstone</p>
+            <button class="cta-button" onclick="showBookingModal()">Book Your Adventure</button>
+        </div>
+    </header>
+
+    <section id="destinations" class="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination-grid">
+            <div class="destination-card" onmouseover="calculateAndShowDuration(7, 2500)">
+                <img src="images/peak.jpg" alt="Mount Kilimanjaro">
+                <h3>Mount Kilimanjaro</h3>
+                <p>Tanzania's crown jewel</p>
+                <div class="duration-info"></div>
+            </div>
+            <div class="destination-card" onmouseover="calculateAndShowDuration(5, 1800)">
+                <img src="images/topoftheworld.jpg" alt="Table Mountain">
+                <h3>Table Mountain</h3>
+                <p>South Africa's iconic landmark</p>
+                <div class="duration-info"></div>
+            </div>
+            <div class="destination-card" onmouseover="calculateAndShowDuration(10, 3000)">
+                <img src="images/rocky.jpg" alt="Rocky Mountains">
+                <h3>Rocky Mountains</h3>
+                <p>North America's majestic range</p>
+                <div class="duration-info"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="hideBookingModal()">&times;</span>
+            <h2>Book Your Adventure</h2>
+            <form id="bookingForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <select required>
+                    <option value="">Select Destination</option>
+                    <option value="kilimanjaro">Mount Kilimanjaro</option>
+                    <option value="table">Table Mountain</option>
+                    <option value="rocky">Rocky Mountains</option>
+                </select>
+                <button type="submit" class="submit-button">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="loadingSpinner" class="loading-spinner"></div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
